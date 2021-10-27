@@ -219,7 +219,7 @@ table_mat
 cat("Accuracy:",sum(diag(table_mat)) / sum(table_mat),"Specificity:",specificity(table_mat),"Sensitivity:",sensitivity(table_mat))
 ```
   (iii) For the pruned tree, plot a ROC curve on your held out test dataset and note the AUC of the new ROC curve. (If
-  possible, overlay the new ROC curve over the ROC curve in (a)(iv); see the ¡°add¡± parameter to the ROC plot() command.)
+  possible, overlay the new ROC curve over the ROC curve in (a)(iv); see the Â¡Â°addÂ¡Â± parameter to the ROC plot() command.)
 ```{r}
 pred.rocr <- predict(pruned_md, newdata=test.df, type="prob")[,2]
 pred <- prediction(pred.rocr, test.df$is_canceled)
